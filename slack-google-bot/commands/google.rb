@@ -9,7 +9,7 @@ module SlackGoogleBot
         if result.nil?
           message = "No search results for `#{expression}`"
         else
-          message = result.title + "\n" + result.uri
+          message = result.title + "\n" + result.uri + "\n" + "```" + result.content + "```"
         end
         send_message client, data.channel, message
       end
