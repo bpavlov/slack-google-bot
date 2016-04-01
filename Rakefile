@@ -3,7 +3,7 @@ require 'bundler'
 
 Bundler.setup :default, :development
 
-unless ENV['RACK_ENV'] == 'production'
+if ENV['RACK_ENV'] == 'test'
   require 'rspec/core'
   require 'rspec/core/rake_task'
 

@@ -4,9 +4,9 @@ gem 'slack-ruby-bot', '~> 0.4.1'
 gem 'puma'
 gem 'sinatra'
 gem 'google-search', '~> 1.0.3'
+gem 'rake', '~> 10.4'
 
 group :development, :test do
-  gem 'rake', '~> 10.4'
   gem 'rubocop', '0.31.0'
   gem 'foreman'
 end
