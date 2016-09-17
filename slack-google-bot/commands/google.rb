@@ -10,7 +10,7 @@ module SlackGoogleBot
               key: ENV['GOOGLE_API_KEY'],
               cx: ENV['GOOGLE_CSE_ID']
             })
-        if results['items'].first.nil?
+        if results['items'].nil?
           result = nil
         else
           result = results['items'].first
