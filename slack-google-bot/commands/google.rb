@@ -10,7 +10,11 @@ module SlackGoogleBot
               key: ENV['GOOGLE_API_KEY'],
               cx: ENV['GOOGLE_CSE_ID']
             })
-        result = results['items'].first
+        if results['items'].first.nil?
+          result = nil
+        else
+          result = results['items'].first
+        end
         if result.nil?
           message = "No search results for `#{expression}`"
         else
